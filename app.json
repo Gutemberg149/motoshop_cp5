@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Vitrine",
+    "slug": "app-vitrine",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.fiap.vitrine",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Usamos sua localizacao para mostrar os pontos de retirada mais proximos de voce.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar suas fotos para voce anexar imagens as avaliacoes."
+      }
+    },
+    "android": {
+      "package": "br.com.fiap.vitrine",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "READ_MEDIA_IMAGES"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Usamos sua localizacao para mostrar os pontos de retirada mais proximos de voce."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Precisamos acessar suas fotos para voce anexar imagens as avaliacoes."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#7C3AED",
+          "defaultChannel": "default"
+        }
+      ]
+    ]
+  }
+}
